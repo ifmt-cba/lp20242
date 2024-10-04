@@ -66,13 +66,28 @@ def q10():
 #    quatro operações básicas entre estes dois números, adição,
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
+def q11():
+    num1 = float(input('1 Número: '))
+    num2 = float(input('2 Número: '))
+    print(f'{num1} + {num2} = {round(num1+num2,2)}')
+    print(f'{num1} - {num2} = {round(num1-num2,2)}')
+    print(f'{num1} * {num2} = {round(num1*num2,2)}')
+    print(f'{num1} / {num2} = {round(num1/num2,2)}')    
 
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
+def q12():
+    numero = float(input('Número: '))
+    print(numero*numero)
+    #print(pow(numero,2))
+    #print(numero**2)
 
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
+def q13():
+    saldo = round(float(input('Saldo: R$ ')),2)
+    print(f'Saldo atualizado 2%: R$ {round(saldo*1.02,2)}')
 
 #14. Faça um programa que leia a base e a altura de um retângulo
 #    e imprima o perímetro (base*2 + altura*2) e a área (base * altura).
