@@ -75,7 +75,7 @@ def q10():
 #    imprima o novo saldo, considerando um reajuste de 2%.
 
 #14. Faça um programa que leia a base e a altura de um retângulo
-#    e imprima o perímetro (base + altura) e a área (base * altura / 2).
+#    e imprima o perímetro (base*2 + altura*2) e a área (base * altura).
 
 #15. Faça um programa que leia o valor de um produto, o percentual
 #    do desconto desejado e imprima o valor do desconto e o valor
