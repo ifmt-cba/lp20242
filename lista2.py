@@ -148,8 +148,11 @@ def q1():
 #0,5 1º, 2º e 3º grupos
 
 questao = int(input('Questão a ser executada: '))
-match questao:
-    case 1:
-        q1()
-    case _:
-        print(f'Questão inválida!')
+eval(f'q{questao}()')
+
+#match questao:
+#    case 1:
+#        q1()
+#    case _:
+#        print('Questão inválida!')
+
