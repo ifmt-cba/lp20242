@@ -4,6 +4,8 @@ Exercícios sobre os comandos de condição em python
 
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
+def q1():
+    print('funciona!')
 
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
@@ -145,3 +147,9 @@ Exercícios sobre os comandos de condição em python
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
 
+questao = int(input('Questão a ser executada: '))
+match questao:
+    case 1:
+        q1()
+    case _:
+        print(f'Questão inválida!')
