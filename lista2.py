@@ -2,6 +2,10 @@
 Exercícios sobre os comandos de condição em python
 '''
 
+from datetime import date, datetime
+
+HOJE = datetime.now()
+
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
 def q1():
@@ -66,6 +70,14 @@ def q8():
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+def q9():
+    data_str = input('Data de Nascimento (dd/mm/yyyy): ')
+    data_nascimento = datetime.strptime(data_str, '%d/%m/%Y')
+
+    if data_nascimento > HOJE:
+        print('Data de nascimento inválida!')
+    else:
+        print(f'Idade: {(HOJE - data_nascimento).days/365}')
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
