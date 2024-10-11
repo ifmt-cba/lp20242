@@ -5,19 +5,44 @@ Exercícios sobre os comandos de condição em python
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
 def q1():
-    print('funciona!')
+    num1 = int(input('Num1: '))
+    num2 = int(input('Num2: '))
+    soma = num1 + num2
+    if soma > 10:
+        print(f'{soma} é maior do que 10')
 
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
+def q2():
+    num1 = int(input('Num1: '))
+    num2 = int(input('Num2: '))
+    soma = num1 + num2
+    if soma > 20:
+        soma = soma + 8
+    else:
+        soma = soma - 5
+    print(f'Resultado final: {soma}') 
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+def q3():
+    num = int(input('Número: '))
+    if num % 3 == 0:
+        print('É múltiplo de 3')
+    else:
+        print('Não é múltiplo de 3')
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+def q5():
+    num = int(input('Número: '))
+    if num % 3 == 0 and num % 7 == 0:
+        print(f'{num} é divisível por 3 e 7')
+    else:
+        print(f'{num} não é divisível por 3 e 7')
 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
@@ -29,6 +54,14 @@ def q1():
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+def q8():
+    num = int(input('Número: '))
+    if num > 20:
+        print('Maior do que 20')
+    elif num == 20:
+        print('É igual a 20')
+    else:
+        print('É menor do que 20')
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
