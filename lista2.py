@@ -3,9 +3,10 @@ Exercícios sobre os comandos de condição em python
 '''
 
 from datetime import date, datetime
+from deep_translator import GoogleTranslator # pip3 install deep-translator
 
 HOJE = datetime.now()
-
+tradutor = GoogleTranslator(source = 'en', target = 'pt')
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
 def q1():
@@ -77,7 +78,7 @@ def q9():
     if data_nascimento > HOJE:
         print('Data de nascimento inválida!')
     else:
-        print(f'Idade: {(HOJE - data_nascimento).days/365}')
+        print(f'Idade: {(HOJE - data_nascimento).days/365} anos')
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
@@ -133,13 +134,21 @@ def q9():
 #18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
 #aparecer uma mensagem informando que não existe mês com este número.
+def q18():
+    mes = int(input('Digite o número do mês: '))
+    if mes < 1 or mes > 12:
+        print('Mês Inválido!')
+    else:
+        data = datetime.strptime(f'01/{mes}/24','%d/%m/%y')
+        mes_extenso = data.strftime('%B')
+        print(tradutor.translate(mes_extenso))
 
 #19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores
 #para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o
 #mesmo número de pontos, criar um programa que informe se uma equipe foi
 #classificada, de acordo com a seguinte especificação:
 #• Ler os pontos obtidos por cada jogador da equipe;
-#• Mostrar esses valores em ordem decrescente;
+#• Mostrar esses em ordem decrescente;
 #• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles,
 #  caso contrário, imprimir a mensagem "Equipe desclassificada".
 
