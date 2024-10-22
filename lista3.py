@@ -3,11 +3,11 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
 
 def exemploPara():
-    for x in range(10):     # vai de 0 a 9
+    for x in range(10):      # vai de 0 a 9
         print(x)
-    for x in range(1,10,2): # vai de 1 a 9, avançando de 2 em 2
+    for x in range(1,10,2):  # vai de 1 a 9, avançando de 2 em 2
         print(x)
-    for x in range(10,1,-1) # vai de 10 a 2
+    for x in range(10,1,-1): # vai de 10 a 2
         print(x)
 
 def exemploEnquanto():
@@ -17,6 +17,9 @@ def exemploEnquanto():
         print(opcao)
 
 #1.Faça um programa que imprima todos os números de 1 até 100.
+def q1():
+    for num in range(1,101):
+        print(num, end=' ')
 
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
 
