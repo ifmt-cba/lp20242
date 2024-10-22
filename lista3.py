@@ -2,6 +2,20 @@
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
 
+def exemploPara():
+    for x in range(10):     # vai de 0 a 9
+        print(x)
+    for x in range(1,10,2): # vai de 1 a 9, avançando de 2 em 2
+        print(x)
+    for x in range(10,1,-1) # vai de 10 a 2
+        print(x)
+
+def exemploEnquanto():
+    opcao = -1
+    while opcao != 0:
+        opcao = int(input('Escolha uma opção (0 para sair): '))
+        print(opcao)
+
 #1.Faça um programa que imprima todos os números de 1 até 100.
 
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
@@ -260,3 +274,6 @@ Lista de Exercícios referentes a estruturas de iteração (repetição)
 #analisadas.
 #Obs.: Para encerrar a entrada de dados, digite um número menor que zero para a
 #idade.
+
+questao = int(input('Questão a ser executada: '))
+eval(f'q{questao}()')
