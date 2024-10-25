@@ -47,9 +47,10 @@ def q4():
 #lidos. Suponha que os números lidos sejam positivos.
 def q5():
     erro = True
+    # while True: # poderia ser um laço infinito e não precisar da variável erro
     while erro == True:
         fator1 = 0
-        try:
+        try: # Bloco que permite tratar instruções que gerem erros
             fator1 = int(input('Número 1: '))
         except ValueError: # só é executado para o tipo de erro ValueError
             print('O valor informado não é um número inteiro!')
@@ -58,6 +59,7 @@ def q5():
             print('Ocorreu um erro desconhecido! Tente novamente!')
             erro = True
         else:
+            # break # comando para interromper o laço de repetição
             erro = False # executa se não ocorrer erro
         finally:
             print(f'Número 1 = {fator1}') # mensagem sempre é exibida, com erro ou não
