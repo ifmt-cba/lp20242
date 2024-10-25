@@ -46,8 +46,29 @@ def q4():
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
 def q5():
-    fator1 = int(input('Número 1: '))
-    fator2 = int(input('Número 2: '))
+    erro = True
+    while erro == True:
+        fator1 = 0
+        try:
+            fator1 = int(input('Número 1: '))
+        except ValueError: # só é executado para o tipo de erro ValueError
+            print('O valor informado não é um número inteiro!')
+            erro = True
+        except: # captura qualquer erro
+            print('Ocorreu um erro desconhecido! Tente novamente!')
+            erro = True
+        else:
+            erro = False # executa se não ocorrer erro
+        finally:
+            print(f'Número 1 = {fator1}') # mensagem sempre é exibida, com erro ou não
+    erro = True
+    while erro == True:
+        try:
+            fator2 = int(input('Número 2: '))
+            erro = False
+        except ValueError:
+            print('O valor informado não é um número inteiro!')
+            erro = True
     produto = 0
     for _ in range(fator1):
         produto += fator2
