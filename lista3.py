@@ -18,6 +18,11 @@ def exemploEnquanto():
         opcao = int(input('Escolha uma opção (0 para sair): '))
         print(opcao)
 
+def exemplosInputPersonalizados():
+    num = input_int('Inteiro: ')
+    num2 = input_float('Real: ')
+    senha = input_senha('Senha: ')
+
 #1.Faça um programa que imprima todos os números de 1 até 100.
 def q1():
     for num in range(1,101):

@@ -2,6 +2,9 @@
 Biblioteca com comandos utilitários personalizados
 '''
 
+# pip install getpass4
+from getpass4 import getpass
+
 def input_int(mensagem):
     while True:
         try:
@@ -23,3 +26,12 @@ def input_float(mensagem):
             print('Ocorreu um erro! Tente novamente.')
         else:
             return real
+
+def input_senha(mensagem):
+    senha = ''
+    while len(senha) < 6:
+        senha = getpass(mensagem)
+        if len(senha) < 6:
+            print('A senha deve ter pelo menos 6 caracteres!')
+        else:
+            return senha
