@@ -2,6 +2,8 @@
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
 
+from util import *
+
 def exemploPara():
     for x in range(10):      # vai de 0 a 9
         print(x)
@@ -82,6 +84,7 @@ def q5():
 #• 1 + 1 = 2, terceiro termo;
 #• 1 + 2 = 3, quarto termo, etc.
 # 1 1 2 3 5 8 13 21
+
 
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
