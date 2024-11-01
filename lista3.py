@@ -95,6 +95,20 @@ def q5():
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
 #imprimir a média geral da turma.
+def q7():
+    relatorio = '\nNOME\tN1\tN2\tMEDIA\n'
+    media_geral = 0
+    qtde_alunos = input_int('Qtde de Alunos: ')
+    for _ in range(qtde_alunos):
+        nome = input('Nome: ')
+        n1 = input_float('Nota 1: ')
+        n2 = input_float('Nota 2: ')
+        media = (n1 + n2) / 2
+        media_geral += media
+        relatorio += f'{nome}\t{n1}\t{n2}\t{round(media,1)}\n'
+    media_geral = media_geral / qtde_alunos
+    print(relatorio)
+    print(f'\nMédia Geral: {round(media_geral,1)}')
 
 #8. Faça umprograma que permita entrar com o nome e o salário bruto de 10 pessoas.
 #Após ler os dados, imprimir o nome e o valor da alíquota do imposto de renda
