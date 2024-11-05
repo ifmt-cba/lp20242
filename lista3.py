@@ -2,9 +2,9 @@
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
 
-from util import *
+from util import input_int, input_float, input_senha
 
-def exemploPara():
+def exemplo_para():
     for x in range(10):      # vai de 0 a 9
         print(x)
     for x in range(1,10,2):  # vai de 1 a 9, avançando de 2 em 2
@@ -12,16 +12,17 @@ def exemploPara():
     for x in range(10,1,-1): # vai de 10 a 2
         print(x)
 
-def exemploEnquanto():
+def exemplo_enquanto():
     opcao = -1
     while opcao != 0:
         opcao = int(input('Escolha uma opção (0 para sair): '))
         print(opcao)
 
-def exemplosInputPersonalizados():
+def exemplos_input_personalizados():
     num = input_int('Inteiro: ')
     num2 = input_float('Real: ')
     senha = input_senha('Senha: ')
+    print(f'num: {num}, num2: {num2}, senha: {senha}')
 
 #1.Faça um programa que imprima todos os números de 1 até 100.
 def q1():
@@ -66,7 +67,7 @@ def q5():
             print('Ocorreu um erro desconhecido! Tente novamente!')
             erro = True
         else:
-            # break # comando para interromper o laço de repetição
+            # break comando para interromper o laço de repetição
             erro = False # executa se não ocorrer erro
         finally:
             print(f'Número 1 = {fator1}') # mensagem sempre é exibida, com erro ou não
