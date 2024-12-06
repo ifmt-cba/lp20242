@@ -342,9 +342,8 @@ def q29():
         codigo = input('Digite L (Limpeza), A (Alimentação ou H (Higiene): ')[0]
         valor = float(input('Valor: R$ '))
         mercadorias[codigo]['valores'].append(valor)
-    print(f'{mercadorias["L"]["nome"]} = R$ {sum(mercadorias["L"]["valores"])}')
-    print(f'{mercadorias["A"]["nome"]} = R$ {sum(mercadorias["A"]["valores"])}')
-    print(f'{mercadorias["H"]["nome"]} = R$ {sum(mercadorias["H"]["valores"])}')
+    for m in mercadorias.values():
+        print(f'{m["nome"]} = R$ {sum(m["valores"])}')        
     print(f'Total = R$ {sum(mercadorias["L"]["valores"])+sum(mercadorias["A"]["valores"])+sum(mercadorias["H"]["valores"])}')
 
 #30. Faça um programa que receba a idade e o estado civil (C-casado, S-solteiro, Vviúvo
