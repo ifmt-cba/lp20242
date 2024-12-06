@@ -186,7 +186,6 @@ def q7():
 #17. Crie um programa que possa ler um conjunto de pedidos de compra e
 #calcule o valor total da compra. Cada pedido é composto pelos seguintes campos:
 #• número de pedido
-#72 Aula 3. Estruturas de Iteração
 #• data do pedido (dia, mês, ano)
 #• preço unitário
 #• quantidade
@@ -202,7 +201,7 @@ def q7():
 #O programa deverá ler novos clientes até que o usuário digite 0 (zero) como
 #número da conta.
 
-#19. Emuma Universidade, os alunos das turmas de informática fizeram uma prova
+#19. Em uma Universidade, os alunos das turmas de informática fizeram uma prova
 #de algoritmos. Cada turma possui um número de alunos. Criar um programa que
 #imprima:
 #• quantidade de alunos aprovados;
@@ -275,7 +274,7 @@ def q7():
 #quando o usuário informar umvalor negativo de velocidade.
 #74 Aula 3. Estruturas de Iteração
 
-#25. Faça umprograma que calcule o imposto de renda de umgrupo de contribuintes,
+#25. Faça umprograma que calcule o imposto de renda de um grupo de contribuintes,
 #considerando que:
 #a) os dados de cada contribuinte (CIC, número de dependentes e renda bruta
 #anual) serão fornecidos pelo usuário via teclado;
@@ -311,21 +310,20 @@ def q7():
 #• quantidade de disciplinas cursadas;
 #• notas em cada disciplina;
 #Além do CR de cada aluno, o programa deve imprimir o melhor CR dos
-#alunos que cursaram5 ou mais disciplinas.
+#alunos que cursaram 5 ou mais disciplinas.
 #• fim da entrada de dados é marcada por uma matrícula inválida (matrículas
 #válidas de 1 a 5000);
 #• CR do aluno é igual à média aritmética de suas notas.
 
-#28. Construa umprograma que receba a idade, a altura e o peso de várias pessoas,
+#28. Construa um programa que receba a idade, a altura e o peso de várias pessoas,
 #Calcule e imprima:
-#3.12. Exercícios da Aula 75
 #• a quantidade de pessoas com idade superior a 50 anos;
 #• amédia das alturas das pessoas com idade entre 10 e 20 anos;
 #• a porcentagem de pessoas com peso inferior a 40 quilos entre todas as
 #pessoas analisadas.
 
 #29. Construa um programa que receba o valor e o código de várias mercadorias
-#vendidas em umdeterminado dia. Os códigos obedecem a lista a seguir:
+#vendidas em um determinado dia. Os códigos obedecem a lista a seguir:
 #L-limpeza
 #A-Alimentação
 #H-Higiene
@@ -333,6 +331,21 @@ def q7():
 #• o total vendido naquele dia, com todos os códigos juntos;
 #• o total vendido naquele dia em cada um dos códigos.
 #Obs.: Para encerrar a entrada de dados, digite o valor da mercadoria zero.
+def q29():
+    mercadorias = {
+        'L':{'nome':'Limpeza','valores':[]},
+        'A':{'nome':'Alimentação','valores':[]},
+        'H':{'nome':'Higiene','valores':[]}
+    }
+    valor = -1
+    while valor != 0:
+        codigo = input('Digite L (Limpeza), A (Alimentação ou H (Higiene): ')[0]
+        valor = float(input('Valor: R$ '))
+        mercadorias[codigo]['valores'].append(valor)
+    print(f'{mercadorias["L"]["nome"]} = R$ {sum(mercadorias["L"]["valores"])}')
+    print(f'{mercadorias["A"]["nome"]} = R$ {sum(mercadorias["A"]["valores"])}')
+    print(f'{mercadorias["H"]["nome"]} = R$ {sum(mercadorias["H"]["valores"])}')
+    print(f'Total = R$ {sum(mercadorias["L"]["valores"])+sum(mercadorias["A"]["valores"])+sum(mercadorias["H"]["valores"])}')
 
 #30. Faça um programa que receba a idade e o estado civil (C-casado, S-solteiro, Vviúvo
 #e D-desquitado ou separado) de várias pessoas. Calcule e imprima:
