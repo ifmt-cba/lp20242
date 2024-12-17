@@ -1,7 +1,22 @@
 import random
 '''
-Lista de Exercícios referentes a coleções em python
+Lista de Exercícios referentes a coleções e arquivos em python
 '''
+
+def exemploArquivo():
+    arquivo = open('exemplo.dat','a')
+    arquivo.write(input('Nome: ')+';')
+    arquivo.write(str(float(input('Nota1: ')))+';')
+    arquivo.write(str(float(input('Nota2: ')))+'\n')
+    arquivo.close()
+    arquivo = open('exemplo.dat','r')
+    for linha in arquivo:
+        dados = linha.strip().split(';')
+        print(dados[0])
+        print(dados[1])
+        print(dados[2])
+    arquivo.close()
+exemploArquivo()
 
 #1. Faça um programa que armazene 15 números inteiros em uma lista e depois
 #permita que o usuário digite um número inteiro para ser buscado na lista, se
@@ -38,7 +53,6 @@ Lista de Exercícios referentes a coleções em python
 #8. Construa um programa que armazene o código, a quantidade, o valor de compra
 #e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
-
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
 #cada um 10 elementos. Ao final o programa deve listar os elementos comuns aos
 #conjuntos.
