@@ -16,13 +16,27 @@ def exemploArquivo():
         print(dados[1])
         print(dados[2])
     arquivo.close()
-exemploArquivo()
 
 #1. Faça um programa que armazene 15 números inteiros em uma lista e depois
 #permita que o usuário digite um número inteiro para ser buscado na lista, se
 #for encontrado o programa deve imprimir a posição desse número na lista, caso
 #contrário, deve imprimir a mensagem: "Nao encontrado!".
-
+def q1():
+    arquivo = open('q1.dat','r')
+    for linha in arquivo:
+        numeros = linha.strip().split(';')
+        achou = False
+        num = input('Digite o número a ser localizado: ')
+        cont = 0
+        for x in numeros:
+            if x == num:
+                print(f'Número localizado na posição {cont}')
+                achou = True
+                break
+            cont+=1
+        if achou == False:
+            print('Número não localizado!')
+q1()
 #2. Faça um programa que armazene 10 letras em uma lista e imprima uma listagem
 #numerada.
 
